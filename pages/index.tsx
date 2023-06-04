@@ -7,6 +7,8 @@ import PageFooter from '../components/PageFooter'
 import Services from '../components/Services'
 import TopBanner from '../components/TopBanner'
 import styles from '../styles/Home.module.css'
+import About from '../components/About'
+import Contact from '../components/Contact'
 
 const Home: NextPage = () => {
   return (
@@ -20,9 +22,11 @@ const Home: NextPage = () => {
       <main className="main m-0 p-0 w-full md:min-h-screen bg-tail-blue">
         <Navbar />
         <TopBanner />
+        <About />
         <Services />
         <BottomBanner />
         <OurPackages />
+        <Contact />
         <PageFooter />
         
     
