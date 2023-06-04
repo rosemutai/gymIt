@@ -10,7 +10,7 @@ import workout from '../public/images/workout.png'
 
 const OurPackages = () => {
   return (
-    <div className="services-cards md:w-full md:flex md:flex-col bg-slate-100 md:px-24 md:pb-24">
+    <div id="ourpackages" className="services-cards md:w-full md:flex md:flex-col bg-slate-100 md:px-24 md:pb-24">
         <div className="title md:mt-16 pt-10 md:pt-0">
             <h1 className="text-orangish text-2xl tracking-wider font-semibold text-center font-roboto uppercase 
                 pb-2 "
