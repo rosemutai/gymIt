@@ -8,18 +8,18 @@ const About = () => {
       <div className="title mt-16">
         <h1
           className="text-orangish text-2xl tracking-wider font-semibold text-center font-roboto uppercase 
-                pb-2 "
+                pb-2 pt-4 md:pt-0"
         >
           About us
         </h1>
         <hr className="w-[8%] mx-auto border-b-2 border-b-orangish mb-12" />
       </div>
-      <div className="flex">
+      <div className="md:flex">
         <div
           className="right-side bg-orangish rounded-md slate100 md:w-1/2 md:h-3/6 md:mb-12 mb-0 mt-12 
             md:shadow-md shadow-orangish"
         >
-          <div className="title md:flex md:flex-col md:items-center md:justify-center">
+          <div className="title w-11/12 mx-auto md:flex md:flex-col md:items-center md:justify-center">
             <h1
               className="train w-9/12 text-tail-blue text-xl md:text-3xl font-roboto 
                     font-black tracking-wid mx-auto md:mx-0 my-3 uppercase"
@@ -51,7 +51,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="left-side md:mt- md:mb-8">
+        <div className="left-side md:mt- md:mb-8 hidden md:block">
           <Image
             data-aos="zoom-in-up"
             src={pp}
