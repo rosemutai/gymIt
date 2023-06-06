@@ -75,25 +75,24 @@ const Navbar = () => {
              font-roboto hover:border-b-2 hover:border-t-0
                     hover:border-x-0 hover:border-b-orangish hover:transition-all"
           >
-        Packages
+            Packages
           </a>
         </AnchorLink>
-
+        <AnchorLink href="#contactus">
+          <a
+            className="menu-link text-slate-100 font-roboto hover:border-b-2 hover:border-t-0
+                    hover:border-x-0 hover:border-b-orangish hover:transition-all"
+          >
+            Contact
+          </a>
+        </AnchorLink>
         <Link href="/membership">
           <a
             className="menu-link text-slate-100
                 font-roboto hover:border-b-2 hover:border-t-0
                     hover:border-x-0 hover:border-b-orangish hover:transition-all"
           >
-            Become a Member
-          </a>
-        </Link>
-        <Link href="/">
-          <a
-            className="menu-link text-slate-100 font-roboto hover:border-b-2 hover:border-t-0
-                    hover:border-x-0 hover:border-b-orangish hover:transition-all"
-          >
-            Contact
+            Join
           </a>
         </Link>
       </div>
