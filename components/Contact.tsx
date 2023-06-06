@@ -12,7 +12,7 @@ const Contact = () => {
         </h1>
         <hr className="w-[8%] mx-auto border-t-0 border-x-0 border-b-2 border-b-orangish mb-12" />
       </div>
-      <form className="membership-form bg-slate-100  w-1/2 mx-auto md:flex md:flex-col md:justify-between mt-3 pb-8">
+      <form className="membership-form bg-slate-100  w-11/12 md:w-1/2 mx-auto md:flex md:flex-col md:justify-between mt-3 pb-8">
         <div className="email flex flex-col w-10/12 mx-auto mt-3">
           <label className="text-tail-blue text-xs md:mt-3">
             Email address
