@@ -8,7 +8,7 @@ import Services from '../components/Services'
 import TopBanner from '../components/TopBanner'
 import styles from '../styles/Home.module.css'
 import About from '../components/About'
-import Contact from '../components/Contact'
+import Contact from './api/Contact'
 
 const Home: NextPage = () => {
   return (
