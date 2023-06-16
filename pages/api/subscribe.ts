@@ -1,7 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
+import { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios'
 
-export default async (req, res) => {
+export default async (req:NextApiRequest, res: NextApiResponse) => {
   const { email } = req.body;
 
   if (!email || !email.length) {
@@ -30,12 +31,11 @@ export default async (req, res) => {
     const response = await axios.post(url, data, options)
     if (response.status >= 400) {
       return res.status(400).json({
-        error: `There was an error subscribing to the newsletter. Shoot me an email at ogbonnakell@gmail and I'll add you to the list.`
+        error: `There was an error subscribing to the newsletter.`
       })
     }
     return res.status(201).json({ message: 'success' })
-  } catch (error) {
-    console.log(error)
+  } catch (error: any) {
     return res.status(500).json({ error: error.message })
   }
 };
