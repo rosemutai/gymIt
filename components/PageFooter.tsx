@@ -19,8 +19,8 @@ const PageFooter = () => {
       const response = await axios.post("/api/subscribe", { email });
       setState("Success");
       setEmail("");
-    } catch (e) {
-      setErrorMsg(e.response.data.error);
+    } catch (error: any) {
+      setErrorMsg("Failed to Subscribe");
       setState("Error");
     }
     
