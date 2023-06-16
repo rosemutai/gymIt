@@ -1,11 +1,30 @@
-import Link from 'next/link'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay} from '@fortawesome/free-solid-svg-icons'
-import {faFacebook, faTwitter, faInstagram, faYoutube  } from '@fortawesome/free-brands-svg-icons'
+import { FormEvent, useState } from "react";
+import Link from "next/link";
+import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faTwitter, faInstagram, faYoutube,} from "@fortawesome/free-brands-svg-icons";
 
 
 const PageFooter = () => {
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState('idle')
+  const [errorMsg, setErrorMsg] = useState('')
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setState("Loading");
+    try {
+      const response = await axios.post("/api/subscribe", { email });
+      setState("Success");
+      setEmail("");
+    } catch (e) {
+      setErrorMsg(e.response.data.error);
+      setState("Error");
+    }
+    
+  };
   return (
     <div className="footer w-full md:flex md:flex-col md:mt-8">
       <div
@@ -108,21 +127,38 @@ const PageFooter = () => {
             SUBSCRIBE TO OUR NEWSLETTER
           </h4>
 
-          <form className="subscribe-form">
+          <form className="subscribe-form" onSubmit={handleSubmit}>
             <input
-              type="text"
+              type="email"
+              value={email}
+              name="email"
+              required
               className="p-1 text-tail-blue border-2 bg-slate-100 shadow-orangish
-                        mt-2 md:mr-3 focus:outline-0 focus:shadow-sm hover:transition-all"
+            mt-2 md:mr-3 focus:outline-0 focus:shadow-sm hover:transition-all"
+              onChange={(event) => setEmail(event.target.value)}
             />
 
             <button
+              type="submit"
+              id="mc-embedded-subscribe"
               className="ad bg-orangish p-2 rounded-md text-slate-100 font-roboto
-                    font-bold tracking-wider mt-2 mb-2 md:mb-0 hover:shadow-md text-[0.7rem]
-                  hover:shadow-orangish hover:opacity-50 hover:transition-all ml-2 md:ml-0"
+            font-bold tracking-wider mt-2 mb-2 md:mb-0 hover:shadow-md text-[0.7rem]
+          hover:shadow-orangish hover:opacity-50 hover:transition-all ml-2 md:ml-0"
             >
-              {" "}
               SUBSCRIBE
             </button>
+
+            {state === "Error" && <div className="error-state">{errorMsg}</div>}
+            {state === "Success" && (
+              <div>
+                <h3
+                  className="text-[0.8rem] text-orangish font-roboto
+                    font-bold tracking-widest md:mt-4 md:mr-4"
+                >
+                  Thank you for subscribing!
+                </h3>
+              </div>
+            )}
           </form>
         </div>
 
@@ -167,11 +203,6 @@ const PageFooter = () => {
       </div>
     </div>
   );
-}
+};
 
-export default PageFooter
-
-
-
-
-
+export default PageFooter;
