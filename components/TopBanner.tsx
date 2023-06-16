@@ -8,10 +8,10 @@ const TopBanner = () => {
         md:flex-row justify-between pl-2 md:px-24 min-h-screen md:pb-8">
         <div className="left-side md:mt-24 md:pt-20">
             <div className="title">
-                <h1 className="train w-7/12 md:w-9/12 text-[1.6rem] md:text-[2.6rem]
+                <h1 className="train w-7/12 md:w-9/12 text-[2rem] md:text-[2.6rem]
                     font-bold md:tracking-wide text-slate-100 sh">Dream a strong body! Achieve it with Us.
                 </h1>
-                <p className="description w-8/12 md:w-8/12  text-slate-100 text-[0.8rem]
+                <p className="description w-9/12 md:w-8/12  text-slate-100 text-[0.8rem]
                     font-light tracking-wider my-10">Start your fitness journey with us today by booking an 
                     appointment. Decide, Commit, Succeed; It never gets easier, you just get stronger.
                 </p>
