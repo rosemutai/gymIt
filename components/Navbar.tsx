@@ -7,9 +7,6 @@ import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
 import { Transition } from '@headlessui/react'
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-// interface NavBarProps extends React.ComponentProps<"div"> {
-//     show: Boolean
-// }
 
 type NavBarProps = {
     show: Boolean,
@@ -46,51 +43,47 @@ const Navbar = () => {
         <Link href="/">
           <a
             className="menu-link text-slate-100 border-0
-                font-roboto  hover:border-b-2 hover:border-b-orangish hover:"
+              font-roboto  hover:border-b-2 hover:border-b-orangish"
           >
             Home
           </a>
         </Link>
-        <AnchorLink href="#aboutus">
-          <a
-            className="menu-link text-slate-100
-                font-roboto hover:border-b-2 hover:border-t-0
-                    hover:border-x-0 hover:border-b-orangish hover:transition-all"
-          >
-            About
-          </a>
+        <AnchorLink
+          href="#aboutus"
+          className="menu-link text-slate-100
+            font-roboto hover:border-b-2 hover:border-t-0
+            hover:border-x-0 hover:border-b-orangish hover:transition-all"
+        >
+          About
         </AnchorLink>
-        <AnchorLink href="#ourservices">
-          <a
-            className="menu-link text-slate-100
+        <AnchorLink
+          href="#ourservices"
+          className="menu-link text-slate-100
              font-roboto hover:border-b-2 hover:border-t-0
                     hover:border-x-0 hover:border-b-orangish hover:transition-all"
-          >
-            Services
-          </a>
+        >
+          Services
         </AnchorLink>
-        <AnchorLink href="#ourpackages">
-          <a
-            className="menu-link text-slate-100
-             font-roboto hover:border-b-2 hover:border-t-0
-                    hover:border-x-0 hover:border-b-orangish hover:transition-all"
-          >
-            Packages
-          </a>
+        <AnchorLink
+          href="#ourpackages"
+          className="menu-link text-slate-100
+            font-roboto hover:border-b-2 hover:border-t-0
+            hover:border-x-0 hover:border-b-orangish hover:transition-all"
+        >
+          Packages
         </AnchorLink>
-        <AnchorLink href="#contactus">
-          <a
-            className="menu-link text-slate-100 font-roboto hover:border-b-2 hover:border-t-0
-                    hover:border-x-0 hover:border-b-orangish hover:transition-all"
-          >
-            Contact
-          </a>
+        <AnchorLink
+          href="#contactus"
+          className="menu-link text-slate-100 font-roboto hover:border-b-2 hover:border-t-0
+            hover:border-x-0 hover:border-b-orangish hover:transition-all"
+        >
+          Contact
         </AnchorLink>
         <Link href="/membership">
           <a
             className="menu-link text-slate-100
-                font-roboto hover:border-b-2 hover:border-t-0
-                    hover:border-x-0 hover:border-b-orangish hover:transition-all"
+              font-roboto hover:border-b-2 hover:border-t-0
+              hover:border-x-0 hover:border-b-orangish hover:transition-all"
           >
             Join
           </a>
